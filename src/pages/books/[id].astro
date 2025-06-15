@@ -1,0 +1,145 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+// Generar rutas estáticas usando 'id' como parámetro
+export async function getStaticPaths() {
+  const books = await getCollection("books");
+  
+  return books.map((book) => ({
+    params: { id: book.slug },  // Usamos 'id' como parámetro
+    props: { book }   
+  }));
+}
+
+// Recibir props
+const { book } = Astro.props;
+const { slug, data } = book;
+const { title, author, editorial, img, readtime, download } = data;
+
+const { Content } = await render(book);
+---
+
+<Layout title={title} >
+  <div class="flex gap-12">
+    <aside class="flex flex-col items-center gap-4">
+      <a href={`/`} class="hover:opacity-50 opacity-70"> <span>&#8592;</span> Atrás </a>
+      <img 
+        transition:name={`img-${img}`}
+        src={`/${img}`} 
+        alt={`Portada de ${title}`} 
+        class="w-full max-h-[500px] object-contain rounded-lg shadow-lg"
+      />
+      <p class="text-center text-gray-500 text-sm">⏲️ {readtime} horas</p>
+      <p class="text-center text-gray-500 text-sm">Autor: {author}</p>
+      <p class="text-center text-gray-500 text-sm">Editorial: {editorial}</p>
+      <a 
+        href={download.mexico}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-4 py-2 bg-gray-800 hover:bg-gray-700 hover:scale-110 text-white rounded-full transition-colors"
+        download={`Portada-${title}.jpg`}
+      >
+        Descargar Libro
+      </a>
+    </aside>
+    <main class="max-w-2xl">
+      <h1 transition:name={`title-${slug}`} class="text-3xl md:text-4xl font-bold mb-6">{title}</h1>
+      <div class="prose prose-invert mb-8">
+        <Content/>
+      </div>  
+    </main>
+  </div>
+</Layout>
+
+
+
+
+
+
+
+  <!-- Contenedor principal
+  <div class="max-w-7xl mx-auto px-2 py-12">
+    <div class="flex flex-col md:flex-row gap-10">
+      {/* Columna izquierda - Imagen */}
+      <div class="md:w-2/5 flex justify-center">
+      <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 shadow-xl">
+        <img 
+        src={`/${img}`} 
+        alt={`Portada de ${title}`} 
+        class="w-full max-h-[500px] object-contain"
+        />
+      </div>
+    </div>
+    
+    {/* Columna derecha - Detalles */}
+    <div class="md:w-3/5">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">{title}</h1>
+    
+    <div class="mb-8 space-y-4">
+      {author && <div>
+        <h2 class="text-xl font-semibold text-gray-300">Autor</h2>
+        <p class="text-lg">{author}</p>
+      </div>}
+      
+      {editorial && <div>
+        <h2 class="text-xl font-semibold text-gray-300">Editorial</h2>
+        <p class="text-lg">{editorial}</p>
+      </div>}
+      
+      <div>
+        <h2 class="text-xl font-semibold text-gray-300">Tiempo de lectura</h2>
+        <p class="text-lg">⏲️ {readtime} horas</p>
+      </div>
+    </div>
+    
+    <div class="mb-10">
+      <h2 class="text-2xl font-semibold mb-4">Descripción</h2>
+      <p class="text-lg leading-relaxed">{description}</p>
+    </div>
+    
+    <div class="flex flex-wrap gap-4">
+      <a 
+      href="#" 
+      class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-lg font-medium transition-colors"
+      >
+      Leer ahora
+    </a>
+    <a 
+    href="#" 
+    class="px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg text-lg font-medium transition-colors"
+    >
+    Descargar PDF
+  </a>
+</div>
+</div>
+</div>
+
+{/* Sección de contenido adicional */}
+<div class="mt-16">
+  <h2 class="text-3xl font-bold mb-8">Contenido del libro</h2>
+  <div class="space-y-4">
+    <div class="bg-gray-800 p-5 rounded-lg border border-gray-700">
+      <h3 class="text-xl font-semibold mb-2">1. Introducción</h3>
+      <p>Conceptos fundamentales y principios básicos...</p>
+    </div>
+    <div class="bg-gray-800 p-5 rounded-lg border border-gray-700">
+      <h3 class="text-xl font-semibold mb-2">2. Desarrollo principal</h3>
+      <p>Análisis detallado de los temas centrales...</p>
+    </div>
+    <div class="bg-gray-800 p-5 rounded-lg border border-gray-700">
+      <h3 class="text-xl font-semibold mb-2">3. Conclusiones</h3>
+      <p>Resumen y aplicaciones prácticas...</p>
+    </div>
+  </div>
+</div>
+</div>
+-->
+
+<style>
+  body {
+    background-color: #0f0f0f;
+    color: #f0f0f0;
+    font-family: 'Inter', sans-serif;
+  }
+</style>

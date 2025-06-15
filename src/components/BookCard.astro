@@ -1,0 +1,49 @@
+---
+export interface Props {
+  slug: string;
+  title: string;
+  img: string;
+  readtime: number;
+  description: string;
+  author?: string;
+  editorial?: string;
+}
+
+const { slug, title, img, readtime, description, author, editorial } = Astro.props;
+---
+
+<article class="flex flex-col md:flex-row w-full bg-gray-800 rounded-lg overflow-hidden border border-gray-700">
+  {/* Contenedor de imagen - tamaño fijo */}
+  
+  <div class="md:w-1/2 p-5 bg-gray-800 flex items-center justify-center">
+    <a href={`./books/${slug}`} class="block w-full">
+      <img 
+        transition:name={`img-${img}`}
+        src={`/${img}`} 
+        alt={`Portada de ${title}`} 
+        class="w-full max-h-100 object-contain" 
+      />
+    </a href="">
+  </div>
+  
+  {/* Contenedor de datos - tamaño flexible */}
+  <a href={`./books/${slug}`} class="md:w-3/4 p-5 bg-gray-800 flex flex-col">
+    <h2 transition:name={`title-${slug}`} class=" mb-2 text-xl font-bold text-white">
+      {title}
+    </h2>
+    
+    {/* Información adicional */}
+    {author && <p class="text-sm text-gray-300 mb-1"><span class="font-medium">Autor:</span> {author}</p>}
+    {editorial && <p class="text-sm text-gray-300 mb-3"><span class="font-medium">Editorial:</span> {editorial}</p>}
+    
+    {/* Descripción */}
+    <p class="text-gray-400 mb-4">
+      {description}
+    </p>
+    
+    <div class="flex justify-between items-center">
+      <span class="text-sm text-gray-500">⏲️ {readtime} horas</span>
+      
+    </div>
+  </a>
+</article>

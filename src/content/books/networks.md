@@ -1,0 +1,15 @@
+---
+title: Networks
+author: Mark Newman
+editorial: Oxford University Press
+img: networks.jpg
+readtime: 25
+description: "Tratado definitivo sobre ciencia de redes que integra fundamentos matemáticos, modelos computacionales y aplicaciones prácticas en campos diversos como tecnología, biología y ciencias sociales."
+download: 
+  mexico: "https://books.ms/main/C8B3BC86ABB6173734C1BE666F33C0ED"
+  usa: "https://www.amazon.com/Networks-Mark-Newman-ebook/dp/B07H3Z8K3B"
+---
+
+## Sinopsis
+
+Networks de Mark Newman ofrece la introducción más completa al campo de la ciencia de redes, integrando avances fundamentales de matemáticas, física, informática, biología y ciencias sociales bajo un marco teórico unificado. El libro inicia explorando diversos tipos de redes: tecnológicas como infraestructuras energéticas e Internet, redes sociales incluyendo dinámicas de amistad y colaboración académica, redes de información como la World Wide Web y citas científicas, además de redes biológicas como sistemas neurales y metabólicos, demostrando cómo patrones estructurales comunes subyacen en sistemas aparentemente dispares. La obra establece sólidos fundamentos matemáticos mediante grafos, matrices y medidas topológicas como grado nodal, coeficiente de clustering y diversas medidas de centralidad, avanzando hacia representaciones complejas como hipergrafos y redes bipartitas. Newman dedica especial atención a algoritmos computacionales esenciales, incluyendo métodos para cálculo de centralidad vectorial donde contrasta técnicas tradicionales con aproximaciones optimizadas como el método de la potencia, cruciales para análisis eficientes en redes masivas. Examina modelos estocásticos fundamentales desde grafos aleatorios de Erdős-Rényi hasta modelos de mundo pequeño y redes libres de escala, con análisis detallados sobre fenómenos críticos como percolación y transiciones de fase en redes. La parte sobre modelos de redes avanzados cubre el modelo de configuración para grafos con grado arbitrario, modelos estocásticos de bloques para comunidades estructuradas, y redes jerárquicas y espaciales con aplicaciones en sistemas urbanos. En aplicaciones prácticas, profundiza en procesos dinámicos sobre redes incluyendo modelos epidemiológicos como SIR y SIS con análisis de umbrales de contagio, sincronización en sistemas acoplados, búsqueda en redes peer-to-peer, y algoritmos de flujo máximo con aplicaciones en logística. El libro concluye con técnicas avanzadas de detección de comunidades mediante modularidad y métodos espectrales, análisis de redes bipartitas y sus proyecciones, además de medidas de correlación y assortatividad. Cada capítulo incluye implementaciones algorítmicas en Python y estudios de caso con datos reales, desde redes de colaboración científica hasta estructuras corticales cerebrales, haciendo de esta obra una referencia indispensable para investigadores y profesionales que trabajan con sistemas complejos.

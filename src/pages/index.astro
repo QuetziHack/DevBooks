@@ -1,11 +1,34 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import BookCard from '../components/BookCard.astro';
+import { getCollection } from 'astro:content';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const books = await getCollection('books');
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Dev🧑‍💻Books" description="Una colección de libros para desarrolladores">
+  <main>
+    <h1 class="text-center text-5xl md:text-7xl font-extrabold mb-12 md:mb-24">Dev👨‍💻 
+      <span class="block">Books</span>
+    </h1>
+    <p class="text-center text-xl md:text-2xl mt-4">Una colección de libros para desarrolladores</p>
+  </main>
+  
+  
+  <section aria-label="Libros para desarrolladores" class="py-10">
+    <div class="px-4 mx-auto max-w-screen-7xl">
+      <div class="grid gap-8 md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 ">
+        {/* Mapeo de libros */}
+        {books.map(book => (
+          <BookCard 
+            slug={book.slug}
+            title={book.data.title}
+            img={book.data.img}
+            readtime={book.data.readtime}
+            description={book.data.description}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
 </Layout>
