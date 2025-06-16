@@ -6,7 +6,7 @@ img: networks.jpg
 readtime: 25
 description: "Tratado definitivo sobre ciencia de redes que integra fundamentos matemáticos, modelos computacionales y aplicaciones prácticas en campos diversos como tecnología, biología y ciencias sociales."
 download: 
-  mexico: "https://books.ms/main/C8B3BC86ABB6173734C1BE666F33C0ED"
+  mexico: "https://libgen.gs/ads.php?md5=5226dd61a8e53e82d123f4831acaf53b"
   usa: "https://www.amazon.com/Networks-Mark-Newman-ebook/dp/B07H3Z8K3B"
 ---
 

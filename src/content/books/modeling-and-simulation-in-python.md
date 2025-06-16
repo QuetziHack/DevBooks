@@ -6,7 +6,7 @@ img: modeling-and-simulation-in-python.jpg
 readtime: 10
 description: "Introducción práctica al modelado físico mediante Python que enseña a analizar escenarios del mundo real como crecimiento poblacional, enfermedades infecciosas, mecánica celeste y más. Ideal para principiantes con conocimientos básicos de matemáticas."
 download: 
-  mexico: "https://books.ms/main/478DF2136520BA9B1CD2A03FB503FAEC"
+  mexico: "https://libgen.gs/ads.php?md5=478df2136520ba9b1cd2a03fb503faec"
   usa: "https://www.amazon.com/Modeling-Simulation-Python-Allen-Downey/dp/1718502168"
 ---
 
