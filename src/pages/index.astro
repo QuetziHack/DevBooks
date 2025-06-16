@@ -7,18 +7,18 @@ const books = await getCollection('books');
 ---
 
 <Layout title="Dev🧑‍💻Books" description="Una colección de libros para desarrolladores">
-  <main>
-    <h1 class="text-center text-5xl md:text-7xl font-extrabold mb-12 md:mb-24">Dev👨‍💻 
-      <span class="block">Books</span>
+  <main class="px-4 text-center">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 md:mb-12 leading-tight">
+      Dev👨‍💻 <span class="block">Books</span>
     </h1>
-    <p class="text-center text-xl md:text-2xl mt-4">Una colección de libros para desarrolladores</p>
+    <p class="text-lg sm:text-xl md:text-2xl text-gray-600">
+      Una colección de libros para desarrolladores
+    </p>
   </main>
   
-  
   <section aria-label="Libros para desarrolladores" class="py-10">
-    <div class="px-4 mx-auto max-w-screen-7xl">
-      <div class="grid gap-8 md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 ">
-        {/* Mapeo de libros */}
+    <div class="px-4 mx-auto max-w-7xl">
+      <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
         {books.map(book => (
           <BookCard 
             slug={book.slug}
