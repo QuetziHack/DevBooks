@@ -1,9 +1,10 @@
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import cname from 'vite-plugin-cname';
 
-// SOLUCIÓN PARA TAILWIND v3
 export default defineConfig({
-  site: 'https://QuetziHack.github.io',
-  base: 'https://devbooks.n8nintegration.online',
-  integrations: [tailwind()]
+  site: 'https://devbooks.n8nintegration.online',
+  base: '/',
+  integrations: [tailwind()],
+  vite: {
+    plugins: [cname({ domain: 'devbooks.n8nintegration.online' })]
+  }
 });
