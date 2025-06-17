@@ -1,12 +1,12 @@
 ---
 title: Álgebra superior
 author: Carmen Gómez Laveaga
-editorial: Universidad Nacional Autónoma de México
+editorial: Universidad Nacional Autonoma de México
 img: algebra-superior-laveaga.jpg
 readtime: 80
 description: "Tratado axiomático que funda el álgebra abstracta en sistemas lógicos formales, construyendo estructuras algebraicas desde principios deductivos primarios."
 download: 
-  mexico: "https://libgen.rs/search.php?req=Álgebra+superior+Gómez+Laveaga"
+  mexico: "https://libgen.gs/ads.php?md5=490d31c56ab6b3dedabbfb06612ad331"
   usa: "https://www.amazon.com/dp/B0CRY9GNQJ"
 ---
 

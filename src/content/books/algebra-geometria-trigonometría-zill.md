@@ -6,7 +6,7 @@ img: algebra-trigonometria-geometria-zill.jpg
 readtime: 50
 description: "Texto unificado con énfasis en fundamentos lógicos para estudiantes de ingeniería y ciencias."
 download: 
-  mexico: "https://libgen.rs/search.php?req=Zill+%C3%81lgebra+trigonometr%C3%ADa+y+geometr%C3%ADa+anal%C3%ADtica"
+  mexico: "https://www.academia.edu/35922769/Algebra_trigonometr%C3%ADa_y_geometr%C3%ADa_anal%C3%ADtica_3ra_Edici%C3%B3n_Dennis_G_Zill"
   usa: "https://www.amazon.com/dp/6071507146"
 ---
 
